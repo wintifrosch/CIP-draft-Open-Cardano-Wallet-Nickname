@@ -2,7 +2,7 @@
 CIP: Open Cardano Wallet Nicknames (OCAWAN)
 Title: An open standard for a registry / translation service fpr user-friendly wallet nicknames
 Authors: wintifrosch <wintifrosch@gmx.ch>
-Comments-URI: Github Issues or Pull requests for this draft CIP
+Comments-URI: Github [Issues](https://github.com/wintifrosch/CIP-draft-Open-Cardano-Wallet-Nickname/issues) or [Pull requests](https://github.com/wintifrosch/CIP-draft-Open-Cardano-Wallet-Nickname/pulls) for this draft CIP
 Status: Pre-Draft
 Type: Process
 Created: 2022-10-15
@@ -60,21 +60,23 @@ The open standard and the publication of the proofs on the internet allows anyon
 
 
 ### 4. Usability Style Guide
-**Moderated by IOHK** Together with the community, IOHK moderates a usability style guide for providers of solutions that support the standard. The style guide ensures that the functions work and look similar in different systems. 
+_Moderated by IOHK:_ Together with the community, IOHK moderates a usability style guide for providers of solutions that support the standard. The style guide ensures that the functions work and look similar in different systems. 
 
-**LOGO** A figurative mark is established to represent an ADA handle, e.g. a symbolised dark blue or white Cardano star (fewer rays and dots for use in text next to characters?). 
+_Word mark:_ A word mark is established to designate this nickname standard (and to distinguish to alternatives like adahandle.com) 
+
+_Icon:_  A figurative mark is established to represent an ADA handle, e.g. a symbolised dark blue or white Cardano star (fewer rays and dots for use in text next to characters?). 
 - For example, it is possible that operating system manufacturers (Android, iOS/MacOS, Windows) mark those entries in the address books of their users for which an Ada handle exists.  
 - Wallet providers could check which contacts of the user have a handle and can list them for the user (similar to how a chat app lists those contacts that can be addressed directly).
 - On a Homepage, this iconn to represent the ADA Handle may be placed beside Twitter, Instagram, etc... icons.
 
-A protocol is defined on how the nickname can be represented as an URI. Each (wallet) app can register for this URI format in the operating system and translate the nickname to the wallet adress. 
+_Cardano URI scheme:_ A protocol is defined on how the nickname can be represented as an URI . Each (wallet) app can register for this URI format in the operating system and translate the nickname to the wallet adress. (cf. [CIP-0013](https://cips.cardano.org/cips/cip13/#paymenturiqueries))
 
 
 ### 5. Standard Evolvement Procedure  
 The Standard establishes procedures to share, elaborate and publish future updates to the standard.
 
 
-## Rationale
+## Rationale ((fragment; keywords only))
 <!-- The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion. -->
 
 ### Proof of ownership
@@ -112,18 +114,21 @@ Should it be possible to store additional data, e.g. an icon, a public and a pri
 
 
 ### Related CIPs
-<!-- The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion. -->
+- [Address Resolution and Validation through DNS and HTTP](https://github.com/cardano-foundation/CIPs/pull/319) (by HeptaSean): aims to link wallets to a domain. Not suitable for everyone. A solution for one-man businesses or small and medium sized companies, but not for everyday people.
+- [CIP 13 - Cardano URI Scheme](https://cips.cardano.org/cips/cip13/#paymenturiqueries): If OCaWa nicknames CIP will be accepted and realized, the URI scheme from CIP-0013 should be extended to support a ocawa-nickname as a valid ``cardanoaddress
 
 
 ## Backwards compatibility
 <!-- All CIPs that introduce backwards incompatibilities must include a section describing these incompatibilities and their severity. The CIP must explain how the author proposes to deal with these incompatibilities. -->
-
+((empty))
 
 ## Path to Active
 <!-- A reference implementation, observable metrics or anything showing the acceptance of the proposal in the community. It must be completed before any CIP is given status "Active", but it need not be completed before the CIP is accepted. It is better to finish the specification and rationale first and reach consensus on it before writing any code. -->
+((empty))
 
 
-[^NFT]: The CIP discussions shall elaborate the best way to implement a decentralized publication system and a directory. Maybe the registrar just signes a simple JSON and puts an NFT in the owners wallet. 
+---------
+
 ```JSON
 {
   "alias": "*<UTF-8>",
@@ -132,5 +137,5 @@ Should it be possible to store additional data, e.g. an icon, a public and a pri
   "valid_until": "<ISO-DATE>",
   "issuer": "<TBD>"
 }
-
-<!-- A reference implementation, observable metrics or anything showing the acceptance of the proposal in the community. It must be completed before any CIP is given status "Active", but it need not be completed before the CIP is accepted. It is better to finish the specification and rationale first and reach consensus on it before writing any code. -->
+```
+[^NFT]: The CIP discussions shall elaborate the best way to implement a decentralized publication system and a directory. Maybe the registrar just signes a simple JSON like the one above, and puts an NFT in the owners wallet. 
