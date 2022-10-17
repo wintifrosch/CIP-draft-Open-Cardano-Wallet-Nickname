@@ -28,11 +28,11 @@ No existing protocols must be modified to realize this translation layer.
 
 ## Work in Progress
 Before this CIP can be submitted, technical solutions for the following aspects shall be discussed in the issues section:
-1. _Phishing attack prevention:_  
+1. [Phishing attack prevention](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/3)  
 Any registrar MUST verify (and guarantee to all future users of a nickname) the legitimacy of a nickname. On what basis can we trust a registrar? How can we ensure that even trusted registrars will add one single fraudulent record?
-2. _On-chain storage space:_   
+2. [On-chain storage space](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/4)  
 Is it possible (and reasonable) to store a nickname data record on-chain, contained in the transaction metadata?
-3. _Off-chain records:_   
+3. [Off-chain records](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/5)   
 Off-chain storage has no limitation of the storage space per nickname. This would allow registrations in bulk, which would lower the cost per nickname. Is this to be considered, if yes: as an alternative to single record on chain storage? 
 
 
