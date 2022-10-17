@@ -1,0 +1,14 @@
+{
+  "ocawan": {
+    "name": "*<UTF-8>",
+    "cardanoaddress": "*(<BASE58> | <BECH32>)"
+  }, {
+  "metadata": {
+    "timestamp": "<ISO-DATE>",
+    "valid_until": "<ISO-DATE>",
+    "class": "<REFERENCE to a class in the central repository of Nickname classes like generic, e_mail, twitter_handle, dns_record, ...>",
+    "verification_method": "<Free Text with or without reference to the verification method as described in the central repository>",
+    "verification_level": "(regular | extended)",
+    "issuer": "<reference TBD>"
+  }
+}
