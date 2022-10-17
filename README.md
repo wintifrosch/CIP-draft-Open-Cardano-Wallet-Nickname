@@ -2,20 +2,20 @@
 CIP: Open Cardano Wallet Nicknames (OCAWAN)
 Title: An open standard for a registry / translation service fpr user-friendly wallet nicknames
 Authors: wintifrosch <wintifrosch@gmx.ch>
-Comments-URI: Github [Issues](https://github.com/wintifrosch/CIP-draft-Open-Cardano-Wallet-Nickname/issues) or [Pull requests](https://github.com/wintifrosch/CIP-draft-Open-Cardano-Wallet-Nickname/pulls) for this draft CIP
+Comments-URI: https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues
 Status: Pre-Draft
 Type: Process
 Created: 2022-10-15
 License: CC-BY-4.0
 ---
 
-# Open Cardano Wallet Nickname «OCAWAN» (CIP pre draft) 
+# Open Cardano Wallet Nickname
 
 
 ## Abstract
 <!-- A short (~200 word) description of the technical issue being addressed. -->
 
-This draft Cardano Improvement Proposal (CIP) proposes an open standard for a registry / translation service for user-friendly wallet nicknames («OCAWA nicknames»). If you know an alias of a person, you may find his wallet address (alias may be his nickname, his mail-address, phonenumber, twitter handle, ...). 
+We introduce a standard to link a wallet adresses and its nickname. Endusers may use such a nickname to specify a wallet instead of the legacy wallet address in any application supporting this standard. The nickname was previously registered by the wallet owner.
 
 
 ## Motivation 
