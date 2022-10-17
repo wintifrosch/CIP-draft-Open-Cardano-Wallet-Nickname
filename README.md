@@ -17,7 +17,7 @@ License: CC-BY-4.0
 
 We introduce an open standard to link a cardano wallet address to a nickname.
 
-By implementing this standard, any «wallet app»[^WalletApp] achieves the following added values for end users:
+Any «wallet app»[^WalletApp] achieves the following added values for end users by implementing this standard:
 * Users are able to associate their nickname to their wallet, upon creating a wallet or afterwards. 
 * To send assets from a wallet, their peers may use the nickname instead of the legacy wallet address. 
 * In every context, the application displays the nickname for any wallet (if created).  
