@@ -15,9 +15,9 @@ License: CC-BY-4.0
 ## Abstract
 <!-- A short (~200 word) description of the technical issue being addressed. -->
 
-We introduce an open standard to link a cardano wallet adresses to a nickname.
+We introduce an open standard to link a cardano wallet address to a nickname.
 
-Any application that implements this standard achieves the following added values for end users:
+By implementing this standard, any «wallet app»[^WalletApp] achieves the following added values for end users:
 * Users are able to associate their nickname to their wallet, upon creating a wallet or afterwards. 
 * To send assets from a wallet, their peers may use the nickname instead of the legacy wallet address. 
 * In every context, the application displays the nickname for any wallet (if created).  
@@ -50,6 +50,31 @@ From a users perspective, a good and broadly adapted nickname solution would be 
 ## Specification 
 <!-- The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Cardano platforms. -->
 
+<!-- 
+new capter structure proposal 2022-10-17
+
+1. Wallet App Use Cases
+2. Indexer usecases
+  - crawler
+  - validator
+  - publisher
+2. validation
+  - nickname classes
+  - nickname ownership verification
+  - nickname class evolution
+  
+1. data structures
+  - json format
+  - CRUD transactions
+  - nickname classes
+  - on-chain
+  - off-chain (for bulk publications)
+  - index data format
+
+
+
+
+--> 
 ### 1. Registration
 The open standard defines how a nickname can be registered. The registration contains a standardised description of how the authenticity of the nickname has been checked. The verification must be renewed periodically (1 to 3 Years + 1 month).
 The «standardized description» refers to a defined catalogue of nickname sources and corresponding verification methods, like a DNS TXT record.[^DNS]  
@@ -150,5 +175,6 @@ There are solutions implemented and in use, but they only work as long as the ow
 
 
 ---------
+[^WalletApp]: For readability reasons, the term «wallet app» is used in this CIP for every application that provides a user interface to interact with cardano wallets. 
 [^NFT]: The CIP discussions shall elaborate the best way to implement a decentralized publication system and a directory. Maybe the registrar just signes a simple JSON like the one above, and puts an NFT in the owners wallet. 
 [^DNS]: a domain name, as [described in the CIP proposal by HeptaSean](https://github.com/cardano-foundation/CIPs/pull/319) is just another class of established handles. The proposed verification method may be one of the standardized verification methods of OCAWAN.
