@@ -1,8 +1,8 @@
 ---
-CIP: Open Cardano Wallet Nicknames (OCAWAN)
-Title: An open standard for a registry / translation service fpr user-friendly wallet nicknames
+CIP: tbd
+Title: OCAWAN - Open Cardano Wallet Nicknames
 Authors: wintifrosch <wintifrosch@gmx.ch>
-Comments-URI: https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues
+Comments-URI: Issues Section
 Status: Pre-Draft
 Type: Process
 Created: 2022-10-15
@@ -15,7 +15,22 @@ License: CC-BY-4.0
 ## Abstract
 <!-- A short (~200 word) description of the technical issue being addressed. -->
 
-We introduce a standard to link a wallet adresses and its nickname. Endusers may use such a nickname to specify a wallet instead of the legacy wallet address in any application supporting this standard. The nickname was previously registered by the wallet owner.
+We introduce an open standard to link a cardano wallet adresses to a nickname.
+
+Any application with a user interface to a Cardano wallet implementing this standard achieves the following added values for end users:
+* Users are able to associate the nickname to a wallet, when creating a wallet or afterwards. 
+* To send assets from a wallet, users may use the nickname instead of the wallet address. 
+* In every context the application displays the nickname for any wallet with a defined nickname.  
+* The user can provide a list of aliases (e.g. his smartphone addressbook) and filter / flag those nicknames with a valid Open Cardano Wallet Nickname.
+
+No existing protocols must be modified to realize this translation layer.
+
+
+## Work in Progress
+Before this CIP can be submitted, technical solutions for the following aspects shall be discussed:
+1. _Phishing attack prevention:_ Any registrar MUST verify (and guarantee to all future users of a nickname) the legitimacy of a nickname. On what basis can we trust a registrar? 
+2. _On-chain storage space:_ Is it possible (and reasonable) to store a nickname data record on-chain, contained in the transaction metadata?
+3. _Off-chain records:_ Off-chain storage has no limitation of the storage space per nickname. This would allow registrations in bulk, which would lower the cost per nickname. Is this to be considered, if yes: as an alternative to single record on chain storage? 
 
 
 ## Motivation 
@@ -23,6 +38,9 @@ We introduce a standard to link a wallet adresses and its nickname. Endusers may
 
 Wallet addresses are not made for humans - they were never meant for humans, but there is no alternative as of yet. This CIP is intended to remedy this shortcoming. 
 
+Since addresses have no semantic, it's hard to distinguish two adresses or to ensure that any address points to the intended wallet. 
+It would be helpful if humans could use a nickname instead - a nickname that is already established and can be associated with the owner of the wallet, a 
+Any application implementing an interface to cardano wallets shall accept nicknames instead of    
 A standard should be established to translate wallet addresses into arbitrary strings and vice versa, similar to how IP addresses can be translated into domain names. It should be possible to use easily remembered words / strings instead of the native addresses of a Cardano wallet. It should be possible to assign already established strings to a wallet address. (e.g. a mail address, a mobile number or Twitter addresses). 
 
 A good solution as _an integral part of the Cadrano Blockchain_ brings a competitive advantage and helps to improve adoption rate.  
