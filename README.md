@@ -136,6 +136,10 @@ _Adoption rate:_ Market penetration is essential. A solution to this problem is 
 
 _universal standard:_ A universal solution as part of the standard prevents alternative solutions from establishing themselves. This strengthens the Cardano brand, because all wallets work with the same "OCAWA nickname" standard. And it prevents users from being stranded because a solution is no longer operated. And then alternatives spring up. 
 
+_no false claims:_
+Since every nickname must be verifiable by design, alle validated nicknames are -- well: _valid_ [^adahandle-1].  
+Since all claims must be confirme / renewed periodically, the nicknames become invalid and are available again for everyone that can proof to own this nickname. This is a very common scenario in the real world, e.g. for mobile numbers. [^adahandle-2]
+
 _alternate nickname classes:_ The standard should support the creation of alternative nickname classes with their own verification methods. like this, all adahandle.com nicknames could be integrated into the standard. Alternative verification methods not provided by IOHK may be created be third parties.  
 
 _open directory (open API):_ All valid addresses (and all revoked ones) should be accessible and trustworthy for all.
@@ -173,6 +177,9 @@ The need for privacy is gradual, and it is always a compromise between costs and
 
 
 -->
+
+_built for the eternity_
+
 #### 1:1?
 to be discussed: 
 - Should it be possible to assign several nicknames to a wallet (e.g. an email address, a Twitter handle and a mobile number)? - Probably: yes.
@@ -206,3 +213,5 @@ There are solutions implemented and in use, but they only work as long as the ow
 [^WalletApp]: For readability reasons, the term «wallet app» is used in this CIP for every application that provides a user interface to interact with cardano wallets. 
 [^NFT]: The CIP discussions shall elaborate the best way to implement a decentralized publication system and a directory. Maybe the registrar just signes a simple JSON like the one above, and puts an NFT in the owners wallet. 
 [^DNS]: a domain name, as [described in the CIP proposal by HeptaSean](https://github.com/cardano-foundation/CIPs/pull/319) is just another class of established handles. The proposed verification method may be one of the standardized verification methods of OCAWAN.
+[^ahadandle-1]:  That's not true for Adahandle.com, where everybody can use every nickname, as long this name is still available. You can create handles for as many phishing victims as you want, as long as you pay adahandle for it.
+[^adahandle-2]: That's not true for adahandle.com, where every handle is gone forever. Adahandle will die, since it's own popularity will turn into a death sentence. 
