@@ -1,11 +1,11 @@
 # Proof of nickname ownership
 
-To prevent phishing attacks, each ``nickname record`` contains a ``claim of nickname ownership``. This claim must be verified before the nickname is used. This may be executed in a batch, and the result may be cached.
+To prevent phishing attacks, each ``nickname record`` contains a ``claim of nickname ownership``. This claim must be verified before the nickname is used. This may be executed in a batch, while building an index. The index may include a verification history.
 
 There are a lot of ``claim types``, each with his own procedures to create and verify a claim. Some of those procedures use a hash function (algo to be defined)  
 
 ## social media account names 
-Rating: easy, popular, practial, without costs
+easy, popular, practial, without costs
 
 It is easy to register any social media account name as a ocawan handle, if the system allows to either ...
 - to publish a text message containing the wallet address hash, get a permanent link pointing to this message and put this link into the ownership claim. 
@@ -16,11 +16,11 @@ The second method only works for tiktok, ...
 
 
 ## Mailadress + S/MIME certificate
-Rating: cumbersome and expensive (~15 USD per Year)
+cumbersome and expensive (~15 USD per Year)
 
 
 ## Google Cloud API
-Summary: Not applicable, too cumbersome.
+Not applicable, too cumbersome.
 
 Since Google+ was dropped, it is no longer possible to share contact details. A Google Cloud Account and an assiciated API key can reveal the main acccount mail address to anyone presenting an authorized API key. Users must create the Gooogle Cloud Account and create a «sign in with google» 
 <!-- 
