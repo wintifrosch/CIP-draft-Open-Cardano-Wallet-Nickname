@@ -23,8 +23,10 @@ Any «wallet app»[^WalletApp] achieves the following added values for end users
 * In every context, the application displays the nickname for any wallet (if created).  
 * The user can provide a list of aliases (e.g. phone numbers, e-mail addresses, social media handles etc. from his smartphone addressbook) and filter / flag those nicknames with a valid Open Cardano Wallet Nickname.
 
+It should be made abundantly clear to all users registering a nickname that this solution compromises privacy.
+
 No existing protocols must be modified to realize this translation layer. 
-To kickstart, at least one free and publicly available index must exist. 
+To kickstart, at least one free and publicly available constantly updated index must exist. 
 
 
 ## Work in Progress
