@@ -145,6 +145,32 @@ _abuse prevention:_ The creation and revocation of a handle must be simple and i
 - No emojis in handles (reduced character set to reduce equally confusable characters or to place fake ‹verified badges›?)
 - dispute procedure
 
+_privacy concerns:_
+The fact that there's no way to connect a cardano wallet address to a person is a huge feature, not a flaw.
+The need for privacy is gradual, and it is always a compromise between costs and benefits.
+OCAWAN is a solution for those people willingly to share at least one of their wallet addresses.
+
+If OCAWAN becomes a reality, it should be made abundantly clear that this solution compromises privacy. OCAWAN is and will always be opt-in.
+(more [here](https://forum.cardano.org/t/cip-human-readable-token-alternative-for-wallet-addresses/109027/27?u=wintifrosch))
+
+<!-- 
+more here: 
+The fact that there's no way to connect a cardano wallet address to a person is a huge feature, not a flaw.
+
+OCAWAN is a solution for those people willingly to share at least one of their wallet addresses. Because you can have an indefinite number of addresses per wallet, they only share kind of a sub ledger, not their whole wallet.  
+
+> That is a massive RED FLAG. [...] Think of the AI algorithms of the future.
+
+I share your stance. BTW I'm looking for methods that _everyone_ can verify that my nicknames are linked to a Cardano wallet address. It's not essential whether google is the system providing this proof. 
+
+Suppose we have two versions of the Cardano blockchain, one with nicknames and the other one without. The first is proud to show the banner «we protect your privacy!» and the other one «reviews confirm: we have the best usability!». Which one will be the popular one?   
+
+If OCAWAN becomes a reality, it should be made abundantly clear that this solution compromises privacy. OCAWAN is and will always be opt-in. You and me are not in the target group.
+
+The need for privacy is gradual, and it is always a compromise between costs and benefits. If you were a privacy maximist, you might even avoid Cardano.
+
+
+-->
 #### 1:1?
 to be discussed: 
 - Should it be possible to assign several nicknames to a wallet (e.g. an email address, a Twitter handle and a mobile number)? - Probably: yes.
