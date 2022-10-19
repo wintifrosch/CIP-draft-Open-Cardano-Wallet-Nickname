@@ -23,9 +23,10 @@ Any «wallet app»[^WalletApp] achieves the following added values for end users
 * In every context, the application displays the nickname for any wallet (if registered).  
 * The user can provide a list of strings and filter / flag those nicknames with a valid Open Cardano Wallet Nickname (e.g. by granting read access to the addressbook).
 
+Nickname registrations must be renewed every year. This process can be automated by the wallet app.  
 It should be made abundantly clear to all users registering a nickname that this solution compromises privacy.
 
-No existing protocols must be modified to realize this translation layer. 
+No existing protocols must be modified to realize this translation layer.  
 To kickstart, at least one free and publicly available constantly updated index must exist. 
 
 
