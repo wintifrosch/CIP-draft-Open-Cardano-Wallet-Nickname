@@ -17,28 +17,30 @@ License: CC-BY-4.0
 
 We introduce an open standard to link a cardano wallet address to a nickname.
 
-Any «wallet app»[^WalletApp] achieves the following added values for end users by implementing this standard:
-* Users are able to associate their nickname to their wallet, upon creating a wallet or afterwards. 
-* To send assets from a wallet, their peers may use the nickname instead of the legacy wallet address. 
-* In every context, the application displays the nickname for any wallet (if registered).  
-* The user can provide a list of strings and filter / flag those nicknames with a valid Open Cardano Wallet Nickname (e.g. by granting read access to the addressbook).
+Nicknames are publicly available files on IPFS.
+Each registration contains proof that the name is actually owned by the registrant.   
+The blockchain is only used to register a nickname via a freely available smart contract. 
 
-Nickname registrations must be renewed every year. This process can be automated by the wallet app.  
-It should be made abundantly clear to all users registering a nickname that this solution compromises privacy.
+Nickname registrations must be renewed every year. 
 
 No existing protocols must be modified to realize this translation layer.  
-To kickstart, at least one free and publicly available constantly updated index must exist. 
+To kickstart, at least one services must exist to proof nickname ownership claims. 
 
 
 ## Work in Progress
+
+<!-- 
+
+-->
 Before this CIP can be submitted, technical solutions for the following aspects shall be discussed in the issues section:
 1. [Phishing attack prevention](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/3)  
-Any registrar MUST verify (and guarantee to all future users of a nickname) the legitimacy of a nickname. On what basis can we trust a registrar? How can we ensure that even trusted registrars will add one single fraudulent record?
+   Any registrar MUST verify (and guarantee to all future users of a nickname) the legitimacy of a nickname. On what basis can we trust a registrar? How can we ensure that even trusted registrars will add one single fraudulent record?
 2. [On-chain storage space](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/4)  
-Is it possible (and reasonable) to store a nickname data record on-chain, contained in the transaction metadata?
+   Is it possible (and reasonable) to store a nickname data record on-chain, contained in the transaction metadata?
 3. [Off-chain records](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/5)   
-Off-chain storage has no limitation of the storage space per nickname. This would allow registrations in bulk, which would lower the cost per nickname. Is this to be considered, if yes: as an alternative to single record on chain storage? 
-
+   Off-chain storage has no limitation of the storage space per nickname. This would allow registrations in bulk, which would lower the cost per nickname. Is this to be considered, if yes: as an alternative to single record on chain storage? 
+4. [Trust issues](https://github.com/wintifrosch/OCAWAN__Open_Cardano_Wallet_Nickname__predraft/issues/7)
+   Where is cryptography required?
 
 ## Motivation 
 <!-- The motivation is critical for CIPs that want to change the Cardano protocol. It should clearly explain why the existing protocol is inadequate to address the problem that the CIP solves. -->
@@ -47,13 +49,37 @@ Wallet addresses are not made for humans - they were never meant for humans, but
 Since wallet addresses have no semantic, it's hard for humans to distinguish two adresses or to ensure that any address points to the intended wallet. 
 It would be helpful for humans to use a nickname instead - a nickname that can be associated with the owner of the wallet, a nickname that is already established and shared. 
 
+The solution shall be implemented in «wallet apps»[^WalletApp].   
 From a users perspective, a good and broadly adapted nickname solution would be perceived as _a feature of the Cadrano Blockchain_, which brings a competitive advantage (even a [USP](https://en.wikipedia.org/wiki/Unique_selling_proposition)?) and improves adoption rate of the Cardano Blockchain. The implementation might therefore be supported by the Cardano Foundation and/or receive Project Catalyst support. 
 
+
+## Features
+
+Any «wallet app» achieves the following added values for end users by implementing this standard:
+* Users are able to associate their nickname to their wallet, upon creating a wallet or afterwards. 
+* To send assets from a wallet, their peers may use the nickname instead of the legacy wallet address. 
+* In every context, the application displays the nickname for any wallet (if registered).  
+* The user can provide a list of strings and filter / flag those nicknames with a valid Open Cardano Wallet Nickname (e.g. by granting read access to the addressbook).
+
+This solution compromises privacy. It should be made abundantly clear to all users registering a nickname.
 
 ## Specification 
 <!-- The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Cardano platforms. -->
 
 <!-- 
+
+It is relatively easy to create a smart contract to build such a register. The hard part is to build an open distributed system that prevents phishing attacks by providing _verifiable ownersip claims_: You always have to trust a third party to have verified this claim. Which third parties do you trust? How do you identify non-trustworthy third parties, and who can ban them?
+
+For e-mail addresses, a S/MIME certificate solves this problem, but they are only used by a few (and they are based on a trusted registrar). Most online services with user accounts have a much simpler verification method by sending a verfification code to the mail address. Over an oAuth mechanism, some of them provide limited access to the verified Mail adresses (e.g. «Sign in with google»). But you won't share the oAuth secret in this verification system.  
+There could be a system to which the user has set up a «login with google» and thus granted access to his account mail address. This system can now provide a zero knowledge proof to any third party, that the system can verify if a given adress is correct. (A possible ZKP could be: in four iterations, the proofing system must identify one out of ten md5 hashes of the mail address, created by the third party using a random secret provided by the proofing system.) 
+
+The task is much easier for systems where users may publish data (social media apps, dropbox, ...) 
+
+### Registering
+ 
+### Claim verification
+
+
 new capter structure proposal 2022-10-17
 
 1. Wallet App Use Cases
